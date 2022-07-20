@@ -1,16 +1,21 @@
-﻿using System;
+﻿using DevExpress.XtraEditors;
+using System;
 using System.ComponentModel;
-using System.Windows.Forms;
 
 namespace test_MVVM
 {
-    public partial class View : Form
+    public partial class View : XtraForm
     {
         private ViewController _viewController = null;
 
         public View()
         {
             InitializeComponent();
+        }
+
+        private void View_Load(object sender, EventArgs e)
+        {
+            UpdateFocus();
         }
 
         private void UpdateFocus()
@@ -22,11 +27,6 @@ namespace test_MVVM
             _viewController = new ViewController();
             treeList1.DataSource = _viewController.ViewModelList;
             treeList1.ExpandAll();
-        }
-
-        private void View_Load(object sender, EventArgs e)
-        {
-            UpdateFocus();
         }
 
         private void BtnLoad_Click(object sender, EventArgs e)
@@ -101,8 +101,10 @@ namespace test_MVVM
         public void RemoveItem(object vm)
         {
             if (vm is ViewModel model)
+            {
                 // send command to data source
                 DataSource.RemoveItem(model.Guid);
+            }
         }
     }
 
@@ -120,8 +122,24 @@ namespace test_MVVM
 
         #region Model parameter
         public Guid Guid => _model.Id;
-        public string Item => _model.Item;
-        public int Price => _model.Price;
+        public string Item
+        {
+            get => _model.Item;
+            set
+            {
+                _model.Item = value;
+            }
+        }
+
+        public int Price
+        {
+            get => _model.Price;
+            set
+            {
+                _model.Price = value;
+            }
+        }
+
         #endregion
 
         private void ModelPropertyChanged(object sender, PropertyChangedEventArgs e)
@@ -132,16 +150,36 @@ namespace test_MVVM
 
     public class Model : PropertyObservable
     {
+        private string _item;
+        private int _price;
+
         public Model(string item, int price)
         {
             Id = Guid.NewGuid();
-            Item = item;
-            Price = price;
+            _item = item;
+            _price = price;
         }
+
         public Guid Id { get; private set; }
 
-        public string Item { get; set; }
+        public string Item
+        {
+            get => _item;
+            set
+            {
+                _item = value;
+                OnPropertyChanged();
+            }
+        }
 
-        public int Price { get; set; }
+        public int Price
+        {
+            get => _price;
+            set
+            {
+                _price = Math.Max(0, value);
+                OnPropertyChanged();
+            }
+        }
     }
 }

@@ -121,6 +121,7 @@ namespace test_MVVM
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.treeList1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnDelete);
@@ -128,7 +129,6 @@ namespace test_MVVM
             this.Controls.Add(this.BtnLoad);
             this.Controls.Add(this.textEdit2);
             this.Controls.Add(this.textEdit1);
-            this.Controls.Add(this.treeList1);
             this.Name = "View";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.View_Load);
