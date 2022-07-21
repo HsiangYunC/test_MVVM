@@ -7,6 +7,9 @@ using System.Windows;
 
 namespace PropertyObserve
 {
+    /// <summary>
+    /// PropertyObservable
+    /// </summary>
     public abstract class PropertyObservable : INotifyPropertyChanged
     {
         /// <summary>

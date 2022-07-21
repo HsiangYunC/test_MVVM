@@ -1,5 +1,5 @@
 ﻿
-namespace test_TreeList
+namespace Test_TreeList
 {
     partial class View
     {
@@ -37,6 +37,7 @@ namespace test_TreeList
             this.BtnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.label1 = new DevExpress.XtraEditors.LabelControl();
             this.label2 = new DevExpress.XtraEditors.LabelControl();
+            this.Btn_NextPage = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.treeList1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
@@ -44,18 +45,20 @@ namespace test_TreeList
             // 
             // treeList1
             // 
-            this.treeList1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.treeList1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.treeList1.Location = new System.Drawing.Point(12, 12);
+            this.treeList1.Location = new System.Drawing.Point(12, 14);
+            this.treeList1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.treeList1.Name = "treeList1";
-            this.treeList1.Size = new System.Drawing.Size(670, 426);
+            this.treeList1.Size = new System.Drawing.Size(670, 511);
             this.treeList1.TabIndex = 0;
             // 
             // textEdit1
             // 
             this.textEdit1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textEdit1.Location = new System.Drawing.Point(688, 98);
+            this.textEdit1.Location = new System.Drawing.Point(688, 159);
+            this.textEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Size = new System.Drawing.Size(100, 24);
             this.textEdit1.TabIndex = 1;
@@ -63,7 +66,8 @@ namespace test_TreeList
             // textEdit2
             // 
             this.textEdit2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textEdit2.Location = new System.Drawing.Point(688, 152);
+            this.textEdit2.Location = new System.Drawing.Point(688, 223);
+            this.textEdit2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textEdit2.Name = "textEdit2";
             this.textEdit2.Size = new System.Drawing.Size(100, 24);
             this.textEdit2.TabIndex = 2;
@@ -71,9 +75,10 @@ namespace test_TreeList
             // BtnLoad
             // 
             this.BtnLoad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnLoad.Location = new System.Drawing.Point(688, 12);
+            this.BtnLoad.Location = new System.Drawing.Point(688, 14);
+            this.BtnLoad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnLoad.Name = "BtnLoad";
-            this.BtnLoad.Size = new System.Drawing.Size(100, 28);
+            this.BtnLoad.Size = new System.Drawing.Size(100, 34);
             this.BtnLoad.TabIndex = 3;
             this.BtnLoad.Text = "Load";
             this.BtnLoad.Click += new System.EventHandler(this.BtnLoad_Click);
@@ -81,9 +86,10 @@ namespace test_TreeList
             // BtnAdd
             // 
             this.BtnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnAdd.Location = new System.Drawing.Point(688, 376);
+            this.BtnAdd.Location = new System.Drawing.Point(688, 451);
+            this.BtnAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnAdd.Name = "BtnAdd";
-            this.BtnAdd.Size = new System.Drawing.Size(100, 28);
+            this.BtnAdd.Size = new System.Drawing.Size(100, 34);
             this.BtnAdd.TabIndex = 4;
             this.BtnAdd.Text = "Add";
             this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
@@ -91,9 +97,10 @@ namespace test_TreeList
             // BtnDelete
             // 
             this.BtnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnDelete.Location = new System.Drawing.Point(688, 410);
+            this.BtnDelete.Location = new System.Drawing.Point(688, 492);
+            this.BtnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnDelete.Name = "BtnDelete";
-            this.BtnDelete.Size = new System.Drawing.Size(100, 28);
+            this.BtnDelete.Size = new System.Drawing.Size(100, 34);
             this.BtnDelete.TabIndex = 5;
             this.BtnDelete.Text = "Delete";
             this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
@@ -101,7 +108,8 @@ namespace test_TreeList
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.Location = new System.Drawing.Point(688, 74);
+            this.label1.Location = new System.Drawing.Point(688, 130);
+            this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(36, 18);
             this.label1.TabIndex = 6;
@@ -110,17 +118,30 @@ namespace test_TreeList
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.Location = new System.Drawing.Point(688, 128);
+            this.label2.Location = new System.Drawing.Point(688, 195);
+            this.label2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(36, 18);
             this.label2.TabIndex = 7;
             this.label2.Text = "label2";
             // 
+            // Btn_NextPage
+            // 
+            this.Btn_NextPage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_NextPage.Location = new System.Drawing.Point(688, 56);
+            this.Btn_NextPage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Btn_NextPage.Name = "Btn_NextPage";
+            this.Btn_NextPage.Size = new System.Drawing.Size(100, 34);
+            this.Btn_NextPage.TabIndex = 8;
+            this.Btn_NextPage.Text = "Next";
+            this.Btn_NextPage.Click += new System.EventHandler(this.Btn_NextPage_Click);
+            // 
             // View
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 540);
+            this.Controls.Add(this.Btn_NextPage);
             this.Controls.Add(this.treeList1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -129,7 +150,9 @@ namespace test_TreeList
             this.Controls.Add(this.BtnLoad);
             this.Controls.Add(this.textEdit2);
             this.Controls.Add(this.textEdit1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "View";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.View_Load);
             ((System.ComponentModel.ISupportInitialize)(this.treeList1)).EndInit();
@@ -150,6 +173,7 @@ namespace test_TreeList
         private DevExpress.XtraEditors.SimpleButton BtnDelete;
         private DevExpress.XtraEditors.LabelControl label1;
         private DevExpress.XtraEditors.LabelControl label2;
+        private DevExpress.XtraEditors.SimpleButton Btn_NextPage;
     }
 }
 

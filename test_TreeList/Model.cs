@@ -1,23 +1,36 @@
 ﻿using PropertyObserve;
 using System;
 
-namespace test_TreeList
+namespace Test_TreeList
 {
-    // ViewModel & Model inherit PropertyObservable class
+    /// <summary>
+    /// Model
+    /// ViewModel & Model inherit PropertyObservable class
+    /// </summary>
     public class Model : PropertyObservable
     {
         private string _item;
-        private int _price;
+        private int _count;
 
-        public Model(string item, int price)
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="item">item name</param>
+        /// <param name="count">count</param>
+        public Model(Fruit item, int count)
         {
             Id = Guid.NewGuid();
-            _item = item;
-            _price = price;
+            _item = item.ToString();
+            _count = count;
         }
 
+        /// <summary>
+        /// Id
+        /// </summary>
         public Guid Id { get; private set; }
-
+        /// <summary>
+        /// Item
+        /// </summary>
         public string Item
         {
             get => _item;
@@ -28,12 +41,15 @@ namespace test_TreeList
             }
         }
 
-        public int Price
+        /// <summary>
+        /// Count
+        /// </summary>
+        public int Count
         {
-            get => _price;
+            get => _count;
             set
             {
-                _price = Math.Max(0, value);
+                _count = Math.Max(0, value);
                 OnPropertyChanged();
             }
         }

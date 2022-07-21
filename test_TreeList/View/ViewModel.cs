@@ -1,26 +1,46 @@
 ﻿using PropertyObserve;
 using System;
 using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
 
-namespace test_TreeList
+namespace Test_TreeList
 {
-    // ViewModel & Model inherit PropertyObservable class
+    /// <summary>
+    /// ViewModel
+    /// ViewModel & Model inherit PropertyObservable class
+    /// </summary>
     public class ViewModel : PropertyObservable
     {
         private readonly Model _model;
+        private Guid _parentId;
 
-        public ViewModel(Model model)
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="model">model</param>
+        /// <param name="parantId">parantId</param>
+        public ViewModel(Model model, Guid parantId)
         {
+            _parentId = parantId;
+
             // add PropertyChanged event
             _model = model;
             _model.PropertyChanged += ModelPropertyChanged;
         }
 
         #region Model parameter
-        [Display(AutoGenerateField = false)]
-        public Guid Guid => _model.Id;
+        /// <summary>
+        /// ID for treeList
+        /// </summary>
+        public Guid ID => _model.Id;
 
+        /// <summary>
+        /// ParentID for treeList
+        /// </summary>
+        public Guid ParentID => _parentId;
+
+        /// <summary>
+        /// Item
+        /// </summary>
         [DisplayName("Item")]
         public string Item
         {
@@ -31,17 +51,23 @@ namespace test_TreeList
             }
         }
 
-        [DisplayName("Price")]
-        public int Price
+        /// <summary>
+        /// Count
+        /// </summary>
+        [DisplayName("Count")]
+        public int Count
         {
-            get => _model.Price;
+            get => _model.Count;
             set
             {
-                _model.Price = value;
+                _model.Count = value;
             }
         }
         #endregion
 
+        /// <summary>
+        /// Dispose
+        /// </summary>
         public void Dispose()
         {
             if (_model != null)

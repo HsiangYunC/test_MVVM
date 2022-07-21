@@ -1,12 +1,19 @@
 ﻿using DevExpress.XtraEditors;
 using System;
 
-namespace test_TreeList
+namespace Test_TreeList
 {
+    /// <summary>
+    /// View
+    /// </summary>
     public partial class View : XtraForm
     {
+        private int _focusIndex = 0;
         private ViewController _viewController = null;
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public View()
         {
             InitializeComponent();
@@ -23,7 +30,7 @@ namespace test_TreeList
             _viewController?.Dispose();
 
             // bind view model list to UI component datasource
-            _viewController = new ViewController();
+            _viewController = new ViewController(_focusIndex);
             treeList1.DataSource = _viewController.ViewModelList;
             treeList1.ExpandAll();
         }
@@ -35,12 +42,15 @@ namespace test_TreeList
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            string item = textEdit1.Text;
-            if (int.TryParse(textEdit2.Text, out int price))
-            {
-                // send command to view controller
-                _viewController.AddItem(item, price);
-            }
+            _viewController.AddItem(_focusIndex);
+            treeList1.ExpandAll();
+
+            //string item = textEdit1.Text;
+            //if (int.TryParse(textEdit2.Text, out int count))
+            //{
+            //    // send command to view controller
+            //    _viewController.AddItem(_focusIndex, item, count);
+            //}
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
@@ -50,8 +60,16 @@ namespace test_TreeList
                 var data = treeList1.GetDataRecordByNode(treeList1.FocusedNode);
 
                 // send command to view controller
-                _viewController.RemoveItem(data);
+                _viewController.RemoveItem(_focusIndex, data);
             }
+
+            treeList1.ExpandAll();
+        }
+
+        private void Btn_NextPage_Click(object sender, EventArgs e)
+        {
+            _focusIndex = ++_focusIndex % 3;
+            UpdateFocus();
         }
     }
 }
