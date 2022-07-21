@@ -8,7 +8,7 @@ namespace Test_2Views
     /// ViewModel
     /// ViewModel & Model inherit PropertyObservable class
     /// </summary>
-    public class ViewModel : PropertyObservable
+    public class View1Model : PropertyObservable
     {
         private readonly Model _model;
         private Guid _parentId;
@@ -18,7 +18,7 @@ namespace Test_2Views
         /// </summary>
         /// <param name="model">model</param>
         /// <param name="parantId">parantId</param>
-        public ViewModel(Model model, Guid parantId)
+        public View1Model(Model model, Guid parantId)
         {
             _parentId = parantId;
 

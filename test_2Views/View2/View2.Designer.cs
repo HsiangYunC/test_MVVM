@@ -1,5 +1,5 @@
 ﻿
-namespace test_2Views
+namespace Test_2Views
 {
     partial class View2
     {
@@ -29,12 +29,33 @@ namespace test_2Views
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.treeList1 = new DevExpress.XtraTreeList.TreeList();
+            ((System.ComponentModel.ISupportInitialize)(this.treeList1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // treeList1
+            // 
+            this.treeList1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeList1.Location = new System.Drawing.Point(0, 0);
+            this.treeList1.Name = "treeList1";
+            this.treeList1.Size = new System.Drawing.Size(800, 450);
+            this.treeList1.TabIndex = 0;
+            // 
+            // View2
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "View1";
+            this.Controls.Add(this.treeList1);
+            this.Name = "View2";
+            this.Text = "View2";
+            ((System.ComponentModel.ISupportInitialize)(this.treeList1)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private DevExpress.XtraTreeList.TreeList treeList1;
     }
 }

@@ -35,9 +35,10 @@ namespace Test_2Views
             // 
             // treeList1
             // 
-            this.treeList1.Location = new System.Drawing.Point(65, 12);
+            this.treeList1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeList1.Location = new System.Drawing.Point(0, 0);
             this.treeList1.Name = "treeList1";
-            this.treeList1.Size = new System.Drawing.Size(457, 325);
+            this.treeList1.Size = new System.Drawing.Size(800, 450);
             this.treeList1.TabIndex = 0;
             // 
             // View1

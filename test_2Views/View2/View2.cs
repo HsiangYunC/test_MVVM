@@ -4,18 +4,18 @@ using System;
 namespace Test_2Views
 {
     /// <summary>
-    /// View1
+    /// View 2
     /// </summary>
-    public partial class View1 : XtraForm
+    public partial class View2 : XtraForm
     {
-        private FocusIndex _focusIndex = new FocusIndex();
-        private View1Controller _viewController = null;
+        private readonly FocusIndex _focusIndex = new FocusIndex();
+        private View2Controller _viewController = null;
 
         /// <summary>
-        /// View 1
+        /// Constructor
         /// </summary>
         /// <param name="focusIndex">focusIndex</param>
-        internal View1(FocusIndex focusIndex)
+        internal View2(FocusIndex focusIndex)
         {
             _focusIndex = focusIndex;
             _focusIndex.PropertyChanged += FocusIndexPropertyChanged;
@@ -29,7 +29,7 @@ namespace Test_2Views
             _viewController?.Dispose();
 
             // bind view model list to UI component datasource
-            _viewController = new View1Controller(_focusIndex.Value);
+            _viewController = new View2Controller(_focusIndex.Value);
             treeList1.DataSource = _viewController.ViewModelList;
             treeList1.ExpandAll();
         }
