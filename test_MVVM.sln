@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test_TreeList", "test_TreeL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test_MVVM_2Views", "test_2Views\test_MVVM_2Views.csproj", "{FBB2730F-6964-4C24-BF75-FD496C8C474E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test_TreeList_CellEdit", "test_TreeList_CellEdit\test_TreeList_CellEdit.csproj", "{4F2DE34E-AF61-4589-A75D-E79459DF8F97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test_TreeList_Simple", "test_TreeList_Simple\test_TreeList_Simple.csproj", "{617DF559-2202-4494-B955-4D3E3E13F8B3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{FBB2730F-6964-4C24-BF75-FD496C8C474E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBB2730F-6964-4C24-BF75-FD496C8C474E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBB2730F-6964-4C24-BF75-FD496C8C474E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F2DE34E-AF61-4589-A75D-E79459DF8F97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F2DE34E-AF61-4589-A75D-E79459DF8F97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F2DE34E-AF61-4589-A75D-E79459DF8F97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F2DE34E-AF61-4589-A75D-E79459DF8F97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{617DF559-2202-4494-B955-4D3E3E13F8B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{617DF559-2202-4494-B955-4D3E3E13F8B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{617DF559-2202-4494-B955-4D3E3E13F8B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{617DF559-2202-4494-B955-4D3E3E13F8B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
