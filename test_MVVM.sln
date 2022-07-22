@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test_MVVM", "test_MVVM\test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test_TreeList", "test_TreeList\test_TreeList.csproj", "{B0E2ED33-6E7B-4041-9B39-35E5BDAB6F34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test_2Views", "test_2Views\test_2Views.csproj", "{FBB2730F-6964-4C24-BF75-FD496C8C474E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test_MVVM_2Views", "test_2Views\test_MVVM_2Views.csproj", "{FBB2730F-6964-4C24-BF75-FD496C8C474E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
